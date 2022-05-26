@@ -1,0 +1,138 @@
+:root {
+  --main-color: #0673e8;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 3000px;
+}
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.mt-2 {
+  margin-top: 2rem !important;
+}
+.mt-3 {
+  margin-top: 3rem !important;
+}
+.mb-1 {
+  margin-bottom: 1rem !important ;
+}
+.mb-2 {
+  margin-bottom: 2rem !important ;
+}
+.mb-3 {
+  margin-bottom: 3rem !important ;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+#app {
+  margin-top: 5rem;
+}
+.container {
+  width: 70%;
+  margin: auto;
+}
+.container .row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.container .row .image-content-side {
+  width: 40%;
+}
+.container .row .name-disc-side {
+  width: 60%;
+  padding-left: 4rem;
+}
+.image-content-side .box-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 7%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  box-shadow: rgb(15 15 20 / 20%) 0px 3px 8px 0px;
+}
+.image-content-side .box-image img {
+  max-width: 300px;
+  max-height: 100%;
+  width: 300px;
+  height: 100%;
+}
+.summary {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+.dic {
+  width: 400px;
+  color: #555;
+  font-size: 14px;
+}
+.dic-2 {
+  width: 100%;
+  color: #555;
+  font-size: 14px;
+}
+.text-primary {
+  color: var(--main-color);
+}
+.content-box {
+  padding: 0 15px;
+}
+
+.name-disc-side .name-box {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.name-disc-side .name-box {
+  font-size: 60px;
+  font-weight: 500;
+}
+.name-disc-side .title-box {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.row-2 .title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.row-3 .date {
+  color: #555;
+}
+.link {
+  text-decoration: none;
+  color: #00f;
+}
+hr {
+  margin: 1rem 0px !important;
+  background-color: #555;
+}
