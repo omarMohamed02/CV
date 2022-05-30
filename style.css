@@ -39,6 +39,7 @@ h6 {
 #app {
   margin-top: 5rem;
   margin-bottom: 5rem;
+  position: relative;
 }
 .container {
   width: 70%;
@@ -63,12 +64,12 @@ h6 {
   border-radius: 7%;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  border: 1px solid #eee;
-  box-shadow: rgb(15 15 20 / 20%) 0px 3px 8px 0px;
 }
 .image-content-side .box-image img {
+  border: 1px solid #eee;
+  box-shadow: rgb(15 15 20 / 20%) 0px 3px 8px 0px;
   max-width: 300px;
   max-height: 100%;
   width: 300px;
@@ -97,18 +98,24 @@ h6 {
   padding: 0 15px;
 }
 
-.name-disc-side .name-box {
+.name-box,
+.name-box-2 {
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-}
-.name-disc-side .name-box {
   font-size: 60px;
   font-weight: 500;
 }
-.name-disc-side .title-box {
+.name-box {
+  display: none;
+}
+.name-box-2 {
+  display: flex;
+}
+
+.title-box {
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
@@ -134,4 +141,80 @@ h6 {
 hr {
   margin: 1rem 0px !important;
   background-color: #555;
+}
+
+.b-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.b-container .pdf {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  text-align: center;
+  padding: 0.786rem 1.5rem;
+  border-radius: 0358rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, background 0s, border 0s,
+    -webkit-box-shadow 0.15s ease-in-out;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1rem;
+  vertical-align: middle;
+  user-select: none;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+.b-container .pdf:hover {
+  box-shadow: 0 8px 25px -8px var(--main-color);
+}
+
+/* ********** Media Query *********** */
+
+@media screen and (max-width: 1420px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .container .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .row .image-content-side,
+  .container .row .name-disc-side {
+    width: 100%;
+  }
+  .container .row .name-disc-side {
+    padding: 0 15px;
+  }
+  .name-box {
+    display: flex;
+  }
+  .name-box-2 {
+    display: none;
+  }
+  .dic {
+    width: 100%;
+  }
+  .image-content-side .box-image {
+    justify-content: center;
+  }
+  .b-container {
+    top: unset;
+    bottom: -4.5rem;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .name-box {
+    font-size: 30px;
+    height: auto;
+    margin: 1.5rem 0;
+  }
+  .row-2 {
+    flex-direction: column;
+  }
 }
