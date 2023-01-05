@@ -87,3 +87,7 @@ $(".mode").on("click", function () {
     $("#dark").show();
   }
 });
+
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
